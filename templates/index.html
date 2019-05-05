@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>website</title>
+    <meta name="Description" content="Hello ..welcome to my page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding: 10px;
+  color: white;
+  }
+
+.html {width: 60%; background-color: #8585ad;}
+.css {width: 80%; background-color: #009973;}
+.js {width: 25%; background-color: #ff8566;}
+.Python {width: 35%; background-color: #80b3ff;}
+a:hover {
+  background-color: #404040;
+  }
+span:hover {
+  background-color: #cccccc;
+  }
+.second{
+   margin:200px 300px;
+   background:#fbfbfb;
+   width:800px;
+   height:1000px;
+   border:1px solid#dcdcdc;
+   border-radius:20px;
+   float:left;
+   }
+.first,.third {
+   margin:30px 10px;
+   border-radius:20px;
+   float:left;
+   }
+</style>
+
+</head>
+<body>
+
+
+
+   <div class="second">
+       <img src="static/لقطة_الشاشة_١٤٤٠_٠٤_٢٤_في_١٢_٠٢.png" style="width:30%;border-radius: 50%; margin:60px 280px;padding=1px;">
+       <h1 style=" text-align:center;color:#676767"> {{ user.username }} </h1>
+
+       <p style="margin:10px 150px;color:#676767;"> {{ user.bio }}</p>
+       <ul style="margin:60px 250px;">
+           <li style="list-style:none;">
+              <a href="https://twitter.com/search?q=المديرية%20العامة%20للسجون&src=tyah">
+                  <img border="0"src="static/images-2.png" width="40px" style="margin:0px;"></a>
+               <a href="https://www.linkedin.com">
+                   <img border="0"src="static/images-1.png" width="50" height="50"; style="margin:0px;"></a>
+               <a href="https://github.com">
+                   <img border="0"src="static/images.png" width="50" height="50"; style="margin:0px;"></a>
+           </li>
+       </ul>
+       <hr style="width:300px;">
+
+       <div class="third" style="width:300px;height:200px;border-radius:20px;margin:1px;float:left">
+           <h2 style="margin:5px;font-family: Verdana, Geneva, sans-serif;color:#404040">My Skills</h2>
+
+           <p style="margin:5px ;padding:1px;">HTML</p>
+           <div class="container" style="margin:8px;border-radius:20px;height:30px;">
+               <div class="skills html" style="border-radius:20px;height:30px;margin:0;">60%</div>
+           </div>
+           <p style="margin:5px;padding:1px;">CSS</p>
+           <div class="container"style="margin:8px;border-radius:20px;height:30px;">
+               <div class="skills css"style="border-radius:20px;height:30px;margin:0;">80%</div>
+           </div>
+           <p style="margin:5px;padding:1px;">JavaScript</p>
+           <div class="container"style="margin:8px;border-radius:20px;height:30px;">
+               <div class="skills js" style="border-radius:20px;height:30px;margin:0;">25%</div>
+           </div>
+           <p style="margin:5px;padding:1px;">Python</p>
+           <div class="container"style="margin:8px;border-radius:20px;height:30px;">
+               <div class="skills Python"style="border-radius:20px;height:30px;margin:0;">35%</div>
+           </div>
+       </div>
+       <div class="first" style="width:300px;height:200px;border-radius:20px;float:right;margin:20px;">
+           <h2 style="margin:15px;font-family:Verdana, Geneva, sans-serif;color:4d4d4d;"> Info</h2>
+           <p style="margin:10px;font-family:Comic Sans MS,cursive;color:#404040;margin:10px;"> phone:<span>{{ info.phone }}</span> </p>
+           <p style="margin:10px;font-family:Comic Sans MS,cursive; color:#404040">Email:<span>{{ info.Email }}</span></p>
+           <p style="margin:10px;font-family:Comic Sans MS,cursive; color:#404040">Tel:   <span>{{ info.Tel }}</span></p>
+           <p style="margin:10px;font-family:Comic Sans MS,cursive; color:#404040">Address: <span>{{ info.Address }}</span></p>
+       </div>
+   </div>
+</body>
